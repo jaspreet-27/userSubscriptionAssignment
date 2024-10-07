@@ -34,7 +34,6 @@ async function register(req: any, res: any) {
       logger.error('Error checking existing user', error);
       return res.status(StatusCode.internalServerError).json({ message: ErrorMessages.somethingWentWrong });
     }
-    console.log('existingUsere', existingUser);
     if (existingUser) {
       logger.info('Attempt to register an already existing user', { email });
       return res.status(StatusCode.badRequest).json({ message: ErrorMessages.alreadyExists('User with the same email') });

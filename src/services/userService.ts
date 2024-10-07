@@ -13,10 +13,8 @@ export async function findUser(userData: findUserRequest): Promise<any> {
   try {
     // Find the user by email
     const user = await User.findOne({ email: userData });
-    console.log(user);
     // Return the user    const user = await User.findOne({if found, else return null
     if (user === null) {
-      console.log(111, user);
       return null;
     } else {
       return user;
@@ -110,8 +108,6 @@ export async function updateUser(userId: string, userData: any) {
   try {
     // Update the user in the database
     const updatedUsers = await User.findByIdAndUpdate(userId, userData, { new: true, runValidators: true });
-
-    console.log(updateUser, 'iugwugdvbuj');
 
     // If the user is not found, return null
     if (!updatedUsers) {

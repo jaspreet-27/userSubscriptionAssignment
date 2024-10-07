@@ -17,7 +17,7 @@ const fileFormat = format.combine(
       log = `${ts} - ${logId} - ${level}: ${message ? message.trim() : ''} ${Object.keys(args).length ? JSON.stringify(args, null, 2) : ''}`;
       return log;
     } catch (error) {
-      console.log('Error @ fileFormat @ logger ', error);
+      console.warn('Error @ fileFormat @ logger ', error);
     }
   }),
 );
@@ -65,7 +65,7 @@ const consoleFormat = format.combine(
       log = `${ts} - ${logId} - ${level}: ${message ? message.trim() : ''} ${Object.keys(args).length ? JSON.stringify(args, null, 2) : ''}`;
       return log;
     } catch (error) {
-      console.log('Error @ fileFormat @ logger ', error);
+      console.warn('Error @ fileFormat @ logger ', error);
     }
   }),
 );

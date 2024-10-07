@@ -1,12 +1,9 @@
 import express from 'express';
 import connectToMongoDB from './config/index';
-import routes from './routes/userRoute';
 import dotenv from 'dotenv';
 dotenv.config();
 import userRoute from './routes/userRoute';
-import taskRoute from './routes/taskRoute';
 import { renewSubscription } from './controllers/taskController';
-// import userRoute from './routes/userRoute';
 
 dotenv.config();
 
@@ -16,7 +13,6 @@ app.use(express.json());
 userRoute(app);
 
 app.use('/api/auth', userRoute);
-// app.use('/api/subscriptions', taskRoute);
 
 let PORT = process.env.PORT;
 connectToMongoDB();

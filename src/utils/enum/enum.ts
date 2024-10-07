@@ -1,4 +1,4 @@
-// subscriptionTypes.ts
+// Subscription Types
 export enum SubscriptionType {
   DAILY = 'daily',
   WEEKLY = 'weekly',

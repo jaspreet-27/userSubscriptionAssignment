@@ -16,9 +16,6 @@ export const SuccessMessages = {
   codesCreated: createMessage('codes Created'),
 
   create: (value: string) => createMessage('created', value),
-  // fetch: (value: string) => createMessage('fetched', value),
-  // update: (value: string) => createMessage('updated', value),
-  // delete: (value: string) => createMessage('deleted', value),
 };
 
 // Error messages
@@ -55,17 +52,3 @@ export const StatusCode = {
   authTokenRequired: 499,
   unauthorized: 403,
 };
-
-// // Controller names
-// export const Controller = {
-//   template: 'template',
-// };
-
-// // Service functions
-// export const ServiceFunction = {
-//   templateAdd: 'templateAdd',
-//   templateFind: 'templateFind',
-//   templateUpdate: 'templateUpdate',
-//   templateDeleted: 'templateDeleted',
-//   getAllTemplate: 'getAllTemplate',
-// };
